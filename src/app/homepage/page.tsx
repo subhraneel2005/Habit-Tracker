@@ -1,4 +1,5 @@
 import { IoMdAdd } from "react-icons/io";
+import Link from "next/link"
 
 export default function Homepage(){
     return (
@@ -10,8 +11,12 @@ export default function Homepage(){
                  <IoMdAdd size={40} className='bg-zinc-900 text-white cursor-pointer rounded-full p-2' />
                 </div>
                 <div className="flex justify-between px-3 mt-10 md:gap-0 gap-4">
-                    <div className=" bg-green-200 hover:bg-green-400 duration-300 cursor-pointer border-2 border-green-900 text-zinc-800 py-[30px] px-4 rounded-xl flex justify-center items-center"><p className="font-bold text-xl">Habit List 📗</p></div> 
+                    <Link href="/homepage/habitlist">
+                    <div className=" bg-green-200 hover:bg-green-400 duration-300 cursor-pointer border-2 border-green-900 text-zinc-800 py-[30px] px-4 rounded-xl flex justify-center items-center"><p className="font-bold text-xl">Habit List 📗</p></div>
+                    </Link> 
+                    <Link href="/homepage/habitprogress">
                     <div className=" bg-red-200 border-2 cursor-pointer hover:bg-red-400 duration-300 border-red-900 text-zinc-800 py-[30px] px-4 rounded-xl flex justify-center items-center"><p className="font-bold text-xl">Habit Progress 🐱‍🏍</p></div>
+                    </Link>
                 </div>
             </div>
     </main>
